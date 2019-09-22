@@ -1,6 +1,6 @@
 from sklearn.base import BaseEstimator, ClassifierMixin
 import keras
-import inpect
+import inspect
 import numpy as np
 
 class KerasMultiClassifier(BaseEstimator, ClassifierMixin):
@@ -91,7 +91,7 @@ class KerasMultiClassifier(BaseEstimator, ClassifierMixin):
       #predict
       predict=multiClassifier.predict(x_test)
 
-      print('predict_proba: ',str(prediction.shape),'predict: ',str(prediction_classes.shape))
+      print('predict_proba: ',str(predict_proba.shape),'predict: ',str(predict.shape))
 
     """
     self.build_fn=build_fn
